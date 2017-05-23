@@ -10,7 +10,9 @@ The code should be well commented because this is more like an __educational__ i
 
 ### What to consider before submitting your code
 - Code should contain a comment about what it does at the beginning.
+- On the next line there should be an example scenario in which code can be used.
 - Code should be modular, it should be easy to understand and edit for others.
+- Try to follow Python conventions and PEP.
 - Code should be well commented so that the people who read it can understand the working easily.
 - Credits\
 In case the code you're submitting code that is not written by you then mention the person who has written it
@@ -19,7 +21,8 @@ If you've found that code on Stack Overflow then give the link. Give them credit
 ### Code Sample
 The code should be written in the following manner to maintain consistency and uniformity. 
 ```python 
-# Description: This function takes n number of arguments as an list and then cubes them 
+# Description: This function takes n number of arguments as an list and then cubes them
+# Example: It can be used to make cubes of a list of numbers in a calculator script
 def cubelife(*args):
     cubed = []  # To store cubes of nubmer 
     for number in args:
