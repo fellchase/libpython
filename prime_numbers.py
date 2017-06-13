@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Author: Vikrant Singh Chauhan
-# Email: "vi@divwebs.com"
+# Email: vi@divwebs.com
 
 """ Function for checking if given argument is a prime number or not.
 
