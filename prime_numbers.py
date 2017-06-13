@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-__author__ = "Vikrant Singh Chauhan"
-__email__ = "vi@divwebs.com"
+# Author: Vikrant Singh Chauhan
+# Email: "vi@divwebs.com"
 
-__doc__ = """ Function for checking if given argument is a prime number or not.
+""" Function for checking if given argument is a prime number or not.
 
 This function is just a simple algorithm to check if given number is prime or not.
 Natural numbers only divisible by 1 and themselves are known as prime numbers. 
@@ -19,7 +19,7 @@ This function does exhaustive linear search by matching each number with remaind
 possible natural numbers. Function provides a little efficiency using the fact that 2 is
 the only even prime number and the other prime numbers are odd. So all the even numbers are
 excluded except 2 to gain some efficiency. Another point to gain efficiency is that multiples
-of any natural numbers will always be lower than the quotient of any natural number divided by 2.
+of any natural numbers will always be lower than the one third of the given number.
 """
 
 
@@ -29,8 +29,8 @@ def prime(argv):
   if(argv % 2 == 0):            # excluding all even numbers except two.
     return False
   else:
-    for x in range(3, int(argv/2), 2):     # here we are starting counter variable from 3 in range. Second argument excludes numbers above the half
-                                           # of given argument. Third argument in range sets steps to take to 2. This makes loop to iterate odds
+    for x in range(3, int(argv/3), 2):     # here we are starting counter variable from 3 in range. Second argument excludes numbers above one third
+                                           # of the given argument. Third argument in range sets steps to take to 2. This makes loop to iterate odds
       if (argv % x == 0):                  # this line checks if argument is divisible by counter.
         return False
   return True
