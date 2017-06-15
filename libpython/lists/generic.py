@@ -22,14 +22,14 @@ def partition_list(raw_list, ngroups):
     # Ceiling means round up to next biggest int
     # floor means to round down to last biggest int
     # We have to ceiling the number otherwise it doesn't divide list into specified ngroups
-    max_elems_in_group = -(-len(numbers) // ngroups)
+    max_elems_in_group = -(-len(raw_list) // ngroups)
 
     grouped_list = []
     group = []
 
     # enumerate gives us an index of the list its passed
     # Basically (0, elem1), (1, elem2) and so on, on each iteration
-    for index, num in enumerate(numbers):
+    for index, num in enumerate(raw_list):
         group.append(num)
 
         # If its has reached the limit we append it to
@@ -40,7 +40,7 @@ def partition_list(raw_list, ngroups):
 
         # Checks if its the last iteration
         # index starts from 0 thus we add 1
-        elif index + 1 == len(numbers):
+        elif index + 1 == len(raw_list):
             grouped_list.append(group)
 
     return grouped_list
