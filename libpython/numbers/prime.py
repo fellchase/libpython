@@ -21,18 +21,14 @@ def prime(num):
     # num is actually a string because input() returns strings. We'll convert it to int
     num = int(num)
 
-    if num < 0:
-        print("Negative integers can not be prime")
-        quit()
-    if num is 1:
-        print("1 is neither prime nor composite")
-        # See how I lazily terminated program otherwise it'd forward "None"(default behaviour of python when function
-        # returns nothing) rather than True or False. Which could mess up the program.
-        # If we hit this if statement above statement is printed then program exits.
-        quit()  # Now you don't need to get sys.exit() to exit python has quit to handle the same thing
-    if num in [2, 3]:
-        # if given argument is 2 or 3, it is prime. We used list without defining a variable which is perfectly valid
+    if num <= 1:
+        # Numbers above 1 are considered prime. So numbers below 2 are not prime.
+        return False
+
+    if num is 2 or num is 3:
+        # if given argument is 2 or 3, it is prime. We used or to seperate two statements. 
         return True
+    
     if num % 2 == 0:  # excluding all even numbers except two.
         return False
     else:
@@ -42,6 +38,7 @@ def prime(num):
             # Checking if argument is divisible by counter. % is modulus operator which returns remainder of division
             if num % x == 0:
                 return False
+    
     # It's okay to have more than one return statement when program hits return statement it exits the function.
     return True
 
