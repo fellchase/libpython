@@ -1,14 +1,14 @@
 # Description: Function for checking if given argument is a prime number or not.
 #
-# Natural numbers only divisible by 1 and themselves are known as prime numbers. 
-# 
+# Natural numbers only divisible by 1 and themselves are known as prime numbers.
+#
 # Prime numbers have always fascinated programmers and computer scientists with its random
 # pattern of occurrence. Mathematicians are still finding ways to next prime number without
 # exhaustive computations. Gap between two consecutive prime numbers is called prime gap. If
 # we are able to find prime gap, we can easily find the next prime number by simply adding
 # the prime gap and known prime number. Finding prime gap is still unsolved problem and if
 # you think it shouldn't be so hard, read this: http://mathworld.wolfram.com/PrimeGaps.html
-# 
+#
 # This function does exhaustive linear search by matching each number with remainder of all
 # possible natural numbers. Function provides a little efficiency using the fact that 2 is
 # the only even prime number and the other prime numbers are odd. So all the even numbers are
@@ -21,8 +21,17 @@ def prime(num):
     # num is actually a string because input() returns strings. We'll convert it to int
     num = int(num)
 
-    if num in [1, 2, 3]:
-        # if given argument is 1 2 or 3, it is prime. We used list without defining a variable which is perfectly valid
+    if num < 0:
+        print("Negative integers can not be prime")
+        quit()
+    if num is 1:
+        print("1 is neither prime nor composite")
+        # See how I lazily terminated program otherwise it'd forward "None"(default behaviour of python when function
+        # returns nothing) rather than True or False. Which could mess up the program.
+        # If we hit this if statement above statement is printed then program exits.
+        quit()  # Now you don't need to get sys.exit() to exit python has quit to handle the same thing
+    if num in [2, 3]:
+        # if given argument is 2 or 3, it is prime. We used list without defining a variable which is perfectly valid
         return True
     if num % 2 == 0:  # excluding all even numbers except two.
         return False
