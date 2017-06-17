@@ -23,11 +23,12 @@ def prime(num):
 
     if num <= 1:
         # Numbers above 1 are considered prime. So numbers below 2 are not prime.
-        return False;
+        return False
 
     if num is 2 or num is 3:
         # if given argument is 2 or 3, it is prime. We used or to seperate two statements. 
         return True
+    
     if num % 2 == 0:  # excluding all even numbers except two.
         return False
     else:
@@ -37,6 +38,7 @@ def prime(num):
             # Checking if argument is divisible by counter. % is modulus operator which returns remainder of division
             if num % x == 0:
                 return False
+    
     # It's okay to have more than one return statement when program hits return statement it exits the function.
     return True
 
