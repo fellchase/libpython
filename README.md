@@ -25,9 +25,9 @@ The code should be well commented because this is more like an __educational__ i
 ### What to consider before submitting your code
 - Code should be in Python 3.
 - Code should be modular & well commented.
-- Make sure that the code and comments don't exceed 120 characters, so to be easily readable.
+- Make sure that the code and comments don't exceed 120 lines, so to be easily readable.
 - In case your code contains some difficult to understand lines of code or syntax which beginners might not know about then please comment it well.
-- Try to follow Python conventions and PEP in general for things like variable names, comments, etc.
+- Try to follow Python conventions and PEP 8 in general for things like variable names, comments, etc.
 - Credits\
 In case the code you're submitting code that is not written by you then mention the person who has written it
 If you've found that code on Stack Overflow then give the link. Give them credits which they deserve :smile:
